@@ -1,47 +1,53 @@
+body
+{
+    background-image: url("background.jpg");
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+}
 #container
 {
-    width: 1000px;
+    width: 1100px;
+    height: 820px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #202020;
+    color: lightgray;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: gray;
 }
 #logo
 {
-    background-color: black;
-    color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+    border-bottom-style: double;
+    border-bottom-color: #31C48D;
 }
-#ad
+#info
 {
-    float: left;
-    background-color: blue;
-    width: 160px;
-    height: 620px;
-    padding: 10px
-}
-#content
-{
-    float: left;
-    width: 620px;
-    height: 620px;
+    text-align: center;
     padding: 10px;
-    background-color: black;
-    color: lightgreen;
-    text-align: center;
 }
-#add
+#engine
 {
-    float: left;
-    background-color: blue;
-    width: 160px;
-    height: 620px;
-    padding: 10px
+    text-align: center;
+    padding: 10px;
+    height: 300px;
+    border-bottom-style: dotted;
+    border-top-style: dotted;
+}
+#passinfo
+{
+    text-align: center;
+    padding: 10px;
+    height: 150px;
+    border-bottom-style: dotted;
 }
 #footer
 {
-    clear: both;
-    background-color: black;
-    color: gray;
+    align-item: flex-end;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
 }
