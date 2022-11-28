@@ -32,11 +32,17 @@ body
 }
 #slider
 {
-    padding: 10px;
+    text-align: center;
+    margin: 20px;
     height: 60px;
     width: 1080px;
-    border-bottom-style: dashed;
 }
+#RangeSlider
+{
+    width: 70%;
+    background-color: #31C48D;
+}
+
 
 #text
 {
@@ -106,6 +112,7 @@ body
     border-color: #31C48D;
     float: left;
 }
+
 #passinfo
 {
     text-align: left;
