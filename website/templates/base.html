@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
+    <script src="JavaScripts.js"></script>
+
   </head>
 
 
@@ -29,43 +31,43 @@
         <img src="logo.png">
       </div>
 
-      <div class="rectangle">
 
-        <div id="info">
-          <h2>Please note, that the longer the password is, the harder it is to crack!</h2>
-        </div>
+      <div id="info">
+        <h2>Please note, that the longer the password is, the harder it is to crack!</h2>
+      </div>
 
-        <div id="slider">
-          <input type="range" min="1" max="50" value="16" id="RangeSlider">
-        </div>
+      <div id="SliderContainer">
+        <input type="range" min="1" max="50" value="16" class="slider" id="myRange">
+        <script src="JavaScripts.js"></script>
+      </div>
 
-        <div id="engine">
-          <input value id="text" spellcheck="false" class="lp-pg-generated-password__input" type="text">
-        </div>
+      <div id="engine">
+        <input value id="text" spellcheck="false" class="generated-password-input" type="text">
+      </div>
 
-        <div id="copy">
-          <button type="button"><i class="demo-icon icon-attach"></i></button>
-        </div>
+      <div id="copy">
+        <button type="button"><i class="demo-icon icon-attach"></i></button>
+      </div>
 
-        <div id="button">
-          <button type="button">Generate</button>
-        </div>
+      <div id="button">
+        <button type="button">Generate</button>
+      </div>
 
-        <div id="padlock">
-          <i class="demo-icon icon-lock"></i>
-        </div>
+      <div id="padlock">
+        <i class="demo-icon icon-lock"></i>
+      </div>
 
-        <div id="passinfo">
-          <h3>You have strong password! Hacker need xxx days to crack it!</h3>
-        </div>
+      <div id="passinfo">
+        <h3>You have strong password! Hacker need xxx days to crack it!</h3>
+      </div>
 
-        <div id="empty"></div>
+      <div id="empty"></div>
 
-        <div id="footer">
-          2022 &copy; Adrian Wójcik - Python Web Developer
-          <i class="demo-icon icon-linkedin-rect"></i>
-          www.linkedin.com/in/adrian-wojcik-python
-        </div>
+      <div id="footer">
+        2022 &copy; Adrian Wójcik - Python Web Developer
+        <i class="demo-icon icon-linkedin-rect"></i>
+        www.linkedin.com/in/adrian-wojcik-python
+      </div>
 
       </div>
 
