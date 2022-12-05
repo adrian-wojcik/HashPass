@@ -1,3 +1,5 @@
+
+//Range Slider
 function modifyOffset() {
   var el, newPoint, newPlace, offset, siblings, k;
   width    = this.offsetWidth;
@@ -37,8 +39,36 @@ function modifyInputs() {
     }
   }
 }
-
 modifyInputs();
+
+//Text Slider
+
+var number = 1
+
+var text1 = "Please note, that the longer the password is, the harder it is to crack!"
+var text2 = "Passwords are easily hacked because most humans follow similar patterns!"
+var text3 = "59% of people use the same password everywhere!"
+var text4 = "90% of passwords can be cracked in less than six hours!"
+var text5 = "18% of employees share their passwords with others!"
+
+function changeText()
+{
+    if (number > 5) number = 1;
+    if (number == 1)
+    {document.getElementById("quote").innerHTML = text1};
+    if (number == 2)
+    {document.getElementById("quote").innerHTML = text2};
+    if (number == 3)
+    {document.getElementById("quote").innerHTML = text3};
+    if (number == 4)
+    {document.getElementById("quote").innerHTML = text4};
+    if (number == 5)
+    {document.getElementById("quote").innerHTML = text5};
+
+    number++;
+    setTimeout("changeText()", 4000)
+}
+
 
 
 
