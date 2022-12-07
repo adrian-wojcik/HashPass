@@ -63,7 +63,7 @@ function changeText()
     if (number == 4)
     {document.getElementById("quote").innerHTML = text4};
     if (number == 5)
-    {document.getElementById("quote").innerHTML = text5};
+    {{document.getElementById("quote").innerHTML = text5};};
 
     number++;
     setTimeout("changeText()", 4000)
@@ -81,12 +81,18 @@ function CopyFunction() {
 
    // Copy the text inside the text field
   navigator.clipboard.writeText(copyText.value);
-
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
 }
 
+//Generate Password
 
+function GeneratePassword() {
+
+    // Get the value from range slider
+    var length = document.getElementById("slider").value;
+
+    // Export length to python engine
+
+}
 
 
 
