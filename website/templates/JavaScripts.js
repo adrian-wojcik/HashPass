@@ -92,6 +92,28 @@ function GeneratePassword() {
 
     // Export length to python engine
 
+    // Changing passinfo
+    var weekinfo = "WARNING!!! Password length is easy to crack.\nIt will take hackers less than 6 hours to crack it"
+    var mediuminfo = "Your password is NOT easy to crack.\nHackers need more time to crack you, but it is still possible!\nThey will need about 2-150 weeks depends on technology!"
+    var goodinfo = "You are safe with this password!\nHackers wold need more than 100 years to crack it!"
+
+    if (length <= 8)
+    {document.getElementById("passinfo").innerHTML = weekinfo;
+    document.getElementById('passinfo').style.color = '#FF6666';
+    document.getElementById('padlock').style.color = '#FF6666';
+    document.getElementById("padlock").style.borderColor = '#FF6666'};
+
+    if (length >= 9 && length <= 10)
+    {document.getElementById("passinfo").innerHTML = mediuminfo;
+    document.getElementById('passinfo').style.color = '#FFB266';
+    document.getElementById('padlock').style.color = '#FFB266';
+    document.getElementById("padlock").style.borderColor = '#FFB266'};
+
+    if (length > 10)
+    {document.getElementById("passinfo").innerHTML = goodinfo;
+    document.getElementById('passinfo').style.color = '#31C48D';
+    document.getElementById('padlock').style.color = '#31C48D';
+    document.getElementById("padlock").style.borderColor = '#31C48D'};
 }
 
 

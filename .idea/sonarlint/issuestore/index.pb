@@ -1,6 +1,4 @@
 
-A
-website/models.py,0\9\09885d167d6058f331705342dbdf5d874f0c1769
 M
 website/templates/LICENSE.txt,7\6\761904a2c0631394b37a6d5d779965ea78d325fa
 S
@@ -25,3 +23,5 @@ N
 website/templates/cssreset.css,8\3\83fde0f6576bee0ee6d2d4931649b2b2224532a3
 @
 website/views.py,e\7\e77e1212ee620da479d24f1e450ac7d5cc16c14f
+M
+website/templates/__init__.py,6\f\6f10db7bf5fb464cabf2f0ee1b67c0fa53259928
