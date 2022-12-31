@@ -69,6 +69,7 @@ function changeText()
     setTimeout("changeText()", 4000)
 }
 
+
 //Copy button
 
 function CopyFunction() {
@@ -83,6 +84,7 @@ function CopyFunction() {
   navigator.clipboard.writeText(copyText.value);
 }
 
+
 //Generate Password
 
 function GeneratePassword() {
@@ -90,12 +92,33 @@ function GeneratePassword() {
     // Get the value from range slider
     var length = document.getElementById("slider").value;
 
-    // Export length to python engine
+    // Create list with characters for password creation
+
+    var alphabet = '#$%&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+
+    // Generating password
+
+    var password = []
+    for (let i = 0; i < length; i++)
+    {
+        var index = Math.floor(Math.random() * 66);
+        single_char = alphabet[index]
+        password.push(single_char)
+
+        for (let i = password.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            [password[i], password[j]] = [password[j], password[i]];
+        }
+    }
+
+    var final_password = password.join("")
+    document.getElementById("text").value = final_password;
+
 
     // Changing passinfo
-    var weekinfo = "WARNING!!! Password length is easy to crack.\nIt will take hackers less than 6 hours to crack it"
-    var mediuminfo = "Your password is NOT easy to crack.\nHackers need more time to crack you, but it is still possible!\nThey will need about 2-150 weeks depends on technology!"
-    var goodinfo = "You are safe with this password!\nHackers wold need more than 100 years to crack it!"
+    var weekinfo = "WARNING!!! Password length is easy to crack.\nIt will take hackers less than 1 hour to crack it\nTry to use recommend length of password - 16!"
+    var mediuminfo = "Your password is NOT easy to crack.\nHackers need more time to crack you, but it is still possible!\nThey will need about 1-20 weeks depends on technology!"
+    var goodinfo = "You are safe with this password!\nHackers wold need more than 30 years to crack it!\nIf you use recommended length of 16 characters - hackers will need 92 billions of years to crack it!"
 
     if (length <= 8)
     {document.getElementById("passinfo").innerHTML = weekinfo;
