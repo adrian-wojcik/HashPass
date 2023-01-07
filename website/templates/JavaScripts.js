@@ -2,9 +2,9 @@
 //Range Slider
 function modifyOffset() {
   var el, newPoint, newPlace, offset, siblings, k;
-  width    = this.offsetWidth;
+  width = this.offsetWidth;
   newPoint = (this.value - this.getAttribute("min")) / (this.getAttribute("max") - this.getAttribute("min"));
-  offset   = -1;
+  offset = -1;
   if (newPoint < 0) { newPlace = 0;  }
   else if (newPoint > 1) { newPlace = width; }
   else { newPlace = width * newPoint + offset; offset -= newPoint;}
@@ -74,7 +74,7 @@ function changeText()
 
 function CopyFunction() {
   // Get the text field
-  var copyText = document.getElementById("text");
+  const copyText = document.getElementById("text");
 
   // Select the text field
   copyText.select();
@@ -90,53 +90,57 @@ function CopyFunction() {
 function GeneratePassword() {
 
     // Get the value from range slider
-    var length = document.getElementById("slider").value;
+    const length = document.getElementById("slider").value;
 
     // Create list with characters for password creation
 
-    var alphabet = '#$%&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+    const alphabet = '#$%&0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
 
     // Generating password
 
-    var password = []
+    const password = []
     for (let i = 0; i < length; i++)
     {
-        var index = Math.floor(Math.random() * 66);
+        const index = Math.floor(Math.random() * 66);
         single_char = alphabet[index]
         password.push(single_char)
 
         for (let i = password.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
+            const j = Math.floor(Math.random() * (i + 1));
             [password[i], password[j]] = [password[j], password[i]];
         }
     }
 
-    var final_password = password.join("")
+    const final_password = password.join("")
     document.getElementById("text").value = final_password;
 
 
     // Changing passinfo
-    var weekinfo = "WARNING!!! Password length is easy to crack.\nIt will take hackers less than 1 hour to crack it\nTry to use recommend length of password - 16!"
-    var mediuminfo = "Your password is NOT easy to crack.\nHackers need more time to crack you, but it is still possible!\nThey will need about 1-20 weeks depends on technology!"
-    var goodinfo = "You are safe with this password!\nHackers wold need more than 30 years to crack it!\nIf you use recommended length of 16 characters - hackers will need 92 billions of years to crack it!"
+    let week_info = "WARNING!!! Password length is easy to crack.\nIt will take hackers less than 1 hour to crack it!\nTry to use recommend length of password: 16!"
+    let medium_info = "Your password is NOT easy to crack.\nHackers needs much more time to crack you, but it is still possible!\nThey will need about 1-20 weeks depends on technology!"
+    let strong_info = "You are safe with this password!\nHackers would need more than 30 years to crack it!\nIf you use recommended length of 16 characters - hackers will need 92 billions of years to crack it!"
+
+    let red_color = '#FF6666'
+    let orange_color = '#FFB266'
+    let green_color = '#31C48D'
 
     if (length <= 8)
-    {document.getElementById("passinfo").innerHTML = weekinfo;
-    document.getElementById('passinfo').style.color = '#FF6666';
-    document.getElementById('padlock').style.color = '#FF6666';
-    document.getElementById("padlock").style.borderColor = '#FF6666'};
+    {document.getElementById("passinfo").innerHTML = week_info;
+    document.getElementById('passinfo').style.color = red_color;
+    document.getElementById('padlock').style.color = red_color;
+    document.getElementById("padlock").style.borderColor = red_color};
 
     if (length >= 9 && length <= 10)
-    {document.getElementById("passinfo").innerHTML = mediuminfo;
-    document.getElementById('passinfo').style.color = '#FFB266';
-    document.getElementById('padlock').style.color = '#FFB266';
-    document.getElementById("padlock").style.borderColor = '#FFB266'};
+    {document.getElementById("passinfo").innerHTML = medium_info;
+    document.getElementById('passinfo').style.color = orange_color;
+    document.getElementById('padlock').style.color = orange_color;
+    document.getElementById("padlock").style.borderColor = orange_color};
 
     if (length > 10)
-    {document.getElementById("passinfo").innerHTML = goodinfo;
-    document.getElementById('passinfo').style.color = '#31C48D';
-    document.getElementById('padlock').style.color = '#31C48D';
-    document.getElementById("padlock").style.borderColor = '#31C48D'};
+    {document.getElementById("passinfo").innerHTML = strong_info;
+    document.getElementById('passinfo').style.color = green_color;
+    document.getElementById('padlock').style.color = green_color;
+    document.getElementById("padlock").style.borderColor = green_color};
 }
 
 
